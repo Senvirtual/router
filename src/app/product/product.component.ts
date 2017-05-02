@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Params} from '@angular/router';
 
 
 @Component({
@@ -10,12 +10,16 @@ import {ActivatedRoute} from '@angular/router';
 export class ProductComponent implements OnInit {
 
   private productId: number;
+
   constructor(private routeInfo: ActivatedRoute) { }
 
   ngOnInit() {
      // 从查询参数中后取数据
     // this.productId = this.routeInfo.snapshot.queryParams['id'];
-    this.productId = this.routeInfo.snapshot.params['id'];
+    // snapshot参数快照
+    // this.productId = this.routeInfo.snapshot.params['id'];
+    // 参数订阅
+    this.routeInfo.params.subscribe((params: Params) => this.productId = params ["id"]);
   }
 
 }
