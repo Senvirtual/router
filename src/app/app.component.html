@@ -7,6 +7,7 @@
 <a [routerLink]="['/product', 1]">商品信息</a>
 <!--()定义的click表示事件绑定，即该click由之后的方法决定-->
 <input type="button" value="商品详情" (click)="toProductDetails()">
+  <!--辅助路由的配置-->
   <a [routerLink] = "[{outlets:{aux: 'chat'}}]">开始聊天</a>
   <!--加入primary关键字设置返回主路由-->
   <a [routerLink] = "[{outlets:{primary:'home', aux: 'chat'}}]">返回主路由开始聊天</a>
