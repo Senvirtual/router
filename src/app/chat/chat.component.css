@@ -1,0 +1,8 @@
+.chat{
+  background-color: gainsboro;
+  height: 100px;
+  width: 20%;
+  float: left;
+  border-radius: 20px 60px 20px 60px;
+  box-sizing: border-box;
+}

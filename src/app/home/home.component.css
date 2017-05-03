@@ -1,0 +1,8 @@
+.home{
+  background-color: antiquewhite;
+  height: 100px;
+  width: 50%;
+  float: left;
+  border-radius: 10px 10px;
+  box-sizing: border-box;
+}
